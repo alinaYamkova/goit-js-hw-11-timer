@@ -16,7 +16,7 @@ module.exports = (env) =>
       entry: "./index.js",
       output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "HW_12.bundle.js",
+        filename: "HW_11.bundle.js",
       },
       module: {
         rules: [
