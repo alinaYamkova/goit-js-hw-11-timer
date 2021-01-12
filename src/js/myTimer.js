@@ -2,7 +2,7 @@
 export default
 
 class CountdownTimer {
-  constructor({ selector, targetDate }) {
+  constructor({targetDate }) {
     this.targetDate = new Date(targetDate);
     this.days = document.querySelector(`[data-value="days"]`);
     this.hours = document.querySelector(`[data-value="hours"]`);
@@ -18,7 +18,7 @@ class CountdownTimer {
     const dateNow = Date.now();
     const time = this.targetDate - dateNow;
     const onTime = this.createValue(time);
-    this.updateClock(onTime);
+    this.updateTime(onTime);
   }
     
   createValue(time) {
@@ -29,7 +29,7 @@ class CountdownTimer {
     return { days, hours, minutes, seconds };
   }
   
-  updateClock({ days, hours, minutes, seconds }) {
+  updateTime({ days, hours, minutes, seconds }) {
     this.days.textContent = days;
     this.hours.textContent = hours;
     this.minutes.textContent = minutes;
