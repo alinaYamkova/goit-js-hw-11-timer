@@ -37,6 +37,7 @@ class CountdownTimer {
   }
 
   intervalId() {
+    this.countData();
     setInterval(() => this.countData(), 1000);
   }
 };
